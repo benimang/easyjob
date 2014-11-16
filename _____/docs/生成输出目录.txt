@@ -1,0 +1,19 @@
+__libs是python34下的lib文件夹内容，但部分内容移除
+	去掉了全部__pycache__
+	去掉了site-packages
+	去掉了test
+	去掉了lib2to3/tests
+将生成的_bz2.pyd和unicodedata.pyd放到了__libs文件夹内
+入口文件将改为只有__libs和__app，另外再开始执行__app/main
+
+
+---------------------- 入口文件 ----------------------
+[easyjob.py]
+import sys, os
+rootFolder = sys.path[1]
+sys.path = [os.path.join(rootFolder, '__libs'), os.path.join(rootFolder, '__app'), os.path.join(rootFolder, '__app', 'lib3')]
+import main
+
+
+---------------------- 编译 ----------------------
+cxfreeze easyjob.py --target-dir outputFolder
