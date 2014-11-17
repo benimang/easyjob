@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+encoding//core/data.py=utf-8
+encoding//core/update.py=utf-8
+encoding//core/version.py=utf-8
 encoding/<project>=UTF-8
+encoding/main.py=utf-8
