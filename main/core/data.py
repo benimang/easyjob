@@ -1,6 +1,7 @@
 #coding=utf-8
 import os
 import pickle
+from core.utils.fileUtils import mkDirs
 
 
 class GlobalData():
@@ -29,7 +30,9 @@ class UserData():
             self.data = None
         
     def flush(self):
-        with open(self.getFile(), 'wb') as f:
+        saveFile = self.getFile()
+        mkDirs(os.path.dirname(saveFile))
+        with open(saveFile, 'wb') as f:
             pickle.dump(self.data, f)
             
 
