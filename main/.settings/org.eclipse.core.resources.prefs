@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 encoding//_cmd/deploy/__init__.py=utf-8
-encoding//_core/base.py=utf-8
 encoding//_core/data.py=utf-8
+encoding//_core/functions.py=utf-8
 encoding//_core/update.py=utf-8
 encoding//_core/utils/cmdLineUtil.py=utf-8
 encoding//_core/utils/cmdUtils.py=utf-8
